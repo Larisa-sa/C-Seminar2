@@ -3,14 +3,14 @@
 // 78 -> третьей цифры нет
 // 32679 -> 6
 
-
-
-Console.WriteLine("Введите число: ");
-int number = Convert.ToInt32(Console.ReadLine());
-string numberText = Convert.ToString(number);
-if (numberText.Length > 2){
- Console.WriteLine($"{number} -> " + numberText[2]);
+Console.Write("Введите число: ");
+string str = Console.ReadLine();
+if (str.Length < 3)
+{
+  Console.WriteLine(str + " -> " + "третьей цифры нет");
 }
-else {
-  Console.WriteLine($"{number} -> третьей цифры нет");
+else
+{
+  Console.WriteLine(str + " -> " + str.Substring(2, 1));
 }
+
